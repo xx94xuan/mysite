@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+IMAGE_NAME=${IMAGE_NAME}
+TAGGED_IMAGE=${TAGGED_IMAGE}
+
+docker tag $IMAGE_NAME $TAGGED_IMAGE
