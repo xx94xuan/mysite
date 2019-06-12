@@ -1,5 +1,8 @@
-<form action="{% url 'gallery:new' %}" method='post'>
+<form action="{% url 'gallery:new' %}" method='post' enctype="multipart/form-data">
     {% csrf_token %}
+    <label for='img'>Image</label>
+    <input type='file' name='img' id='img' >
+    <br>
     <label for='img_alt'>Alt</label>
     <input type='text' name='img_alt' id='img_alt' >
     <br>

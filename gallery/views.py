@@ -11,15 +11,16 @@ def index(request):
 
 def new(request):
     if request.method == 'POST':
-        form = GalleryForm(request.POST)
+        form = GalleryForm(request.POST, request.FILES)
         if form.is_valid():
-            new_pic = Picture()
-            new_pic.img_alt = form.cleaned_data['img_alt']
-            new_pic.img_author = form.cleaned_data['img_author']
-            new_pic.save()
+            # new_pic = Picture()
+            # new_pic.img_alt = form.cleaned_data['img_alt']
+            # new_pic.img_author = form.cleaned_data['img_author']
+            # new_pic.save()
 
             # 'GalleryForm' object has no attribute 'save' ???
-            # form.save()
+            form.cleaned_data
+            form.save()
             return HttpResponseRedirect('/gallery/')
     else: 
         form = GalleryForm()
@@ -33,3 +34,4 @@ def show(request, picture_id):
         'pic': pic
     }
     return render(request, 'gallery/show.html', context)
+
