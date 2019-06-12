@@ -34,6 +34,21 @@
 
 + Playing with the API
 	+ `$ python manage.py shell`
+		```
+		# import the model class
+		from polls.models import Question
+
+		# list out all the data of Question model
+		questions = Question.objects.all()
+
+		from django.utils import timezone
+
+		# create a new Question
+		q = Question(question_text="What's new?", pub_date=timezone.now())
+
+		# save the record to database
+		q.save()
+		```
 
 ### Introducing the Django Admin¶
 
