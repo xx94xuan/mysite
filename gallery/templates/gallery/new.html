@@ -1,0 +1,10 @@
+<form action="{% url 'gallery:new' %}" method='post'>
+    {% csrf_token %}
+    <label for='img_alt'>Alt</label>
+    <input type='text' name='img_alt' id='img_alt' >
+    <br>
+    <label for='img_author'>Author</label>
+    <input type='text' name='img_author' id='img_author' >
+    <br><br>
+    <input type='submit' value='Submit'>
+</form>

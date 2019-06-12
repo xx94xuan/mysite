@@ -1,0 +1,13 @@
+<a href="{% url 'gallery:new' %}">New one</a>
+
+{% if imgs %}
+    <ul>
+        {% for img in imgs %}
+            <li>
+                <a href="{% url 'gallery:show' img.id %}">{{ img.img_alt }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No imgs are avalibale.</p>
+{% endif %}
