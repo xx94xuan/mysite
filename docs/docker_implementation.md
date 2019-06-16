@@ -39,3 +39,5 @@ these files would run docker commands to build images. - [build_app.sh](https://
 8. visit [dockerhub](https://hub.docker.com/) on browser to see the pushed image
 
 
+## Set up this project locally
+After `make build_app`, run `docker images` to get the latest image and run command: `docker run -it -p 0.0.0.0:8000:8000 IMAGE_ID sh` to interact with the image. Once get into the `sh` mode, run `python manage.py runserver 0.0.0.0:8000` to start the server.visit `localhost:8000/gallery` to test if the server is running.
