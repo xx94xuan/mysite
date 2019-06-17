@@ -2,9 +2,9 @@
 
 BASE_IMAGE=${BASE_IMAGE}
 DOCKERFILE=${DOCKERFILE}
-FORCE_BUILD=${force_build}
+FORCE_BUILD=${FORCE_BUILD}
 
-if $FORCE_BUILD = "true"
+if $FORCE_BUILD == "true"
 then
     echo "force build..."
     docker build --no-cache -f $DOCKERFILE -t $BASE_IMAGE .

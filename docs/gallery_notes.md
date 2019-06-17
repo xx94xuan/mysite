@@ -99,4 +99,4 @@ class GalleryForm(forms.ModelForm):
     _NOTEs_: `enctype="multipart/form-data` is significant in the `<form>` tag
 
 ## docker image for Gallery app
-`docker pull dockerforxxx/xxx-app:9aefc64ceef1a03ae577ee5beed71db642463487`
+`docker pull dockerforxxx/basic-gallery:988ff0c88192cbb9d66082f4739bc7c1a5bab587`
